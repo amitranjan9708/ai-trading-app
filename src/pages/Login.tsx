@@ -1,12 +1,12 @@
 import React from "react";
 import AuthForm from "../components/AuthForm";
-import { Link } from "react-router-dom";
-
+import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   const handleLogin = (data: { email: string; password: string }) => {
     // Mock API (replace with backend later)
-    console.log("Login attempt:", data);
-    alert(`Logged in as ${data.email}`);
+    navigate('/charts')
   };
 
   return (

@@ -10,8 +10,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
+import { useNavigate } from 'react-router-dom';
+import { useStore } from './store/store';
+
 
 export function TradingHeader() {
+  const openPortfolio = useStore((state) => state.togglePortfolio);
   return (
     <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center justify-between px-6">
@@ -29,7 +33,7 @@ export function TradingHeader() {
           
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#" className="font-medium text-foreground">Dashboard</a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Portfolio</a>
+            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" onClick={openPortfolio} >Portfolio</a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Watchlist</a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Research</a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Analytics</a>
