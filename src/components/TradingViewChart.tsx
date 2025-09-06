@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export function TradingViewChart() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [symbol, setSymbol] = useState("SPY"); // Default: Nifty 50
-
+ //amit
   useEffect(() => {
     if (containerRef.current) {
       containerRef.current.innerHTML = ""; // clear previous chart
