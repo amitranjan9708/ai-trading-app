@@ -36,7 +36,7 @@ export function TradingHeader() {
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" onClick={openPortfolio} >Portfolio</a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Watchlist</a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Research</a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Analytics</a>
+            {/* <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Analytics</a> */}
           </nav>
         </div>
 
